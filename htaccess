@@ -1,0 +1,15 @@
+Setting the HTTPS Redirection
+Ensure that the Digital Certificate is properly installed on your Hosting Order, and the site is resolving on https://girorganic-admin.in.
+
+NOTE
+Your site will work on https://girorganic-admin.in or https://www.girorganic-admin.in or https://manage.girorganic-admin.in, depending on the Common Name for which you had the certificate issued. Resolving HTTPS on anything other than this Common Name would result in a certificate name mismatch error.
+
+Create a .htaccess file under the site's directory and add the following lines to it. In case there already exists a .htaccess in your site's directory, carefully edit it to add these lines:
+
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule (.*) https://<common_name>%{REQUEST_URI}
+
+
+
+<common_name> needs to be replaced by the Common Name for which the Digital Certificate is issued.
