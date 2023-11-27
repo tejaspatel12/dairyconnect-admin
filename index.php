@@ -120,10 +120,8 @@
 											<div class="d-flex align-items-center">
 												<div>
 													<h2 class="mb-0 text-white">
-														<?php
-															$result=mysqli_query($conn,"select oc_id from tbl_order_calendar where oc_is_delivered='1' and order_date='$newdate'");
-															echo mysqli_num_rows($result);
-														?> 
+												
+												1
 													<i class='bx bxs-up-arrow-alt font-14 text-white'></i> </h2>
 												</div>
 												<div class="ml-auto font-35 text-white"><i class="bx bx-cart-alt"></i>

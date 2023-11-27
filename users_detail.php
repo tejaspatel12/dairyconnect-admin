@@ -1,8 +1,8 @@
 <?php
     session_start();
     include 'connection.php';
-    $title = "User";
-    $code = "user";
+    $title = "Delivery Boy";
+    $code = "delivery_boy";
     $status = "1";
 	if(!isset($_SESSION["admin_id"]))
 	{
@@ -13,7 +13,7 @@
     while($row=mysqli_fetch_assoc($cat_res)){
         $cat_arr[]=$row;	
     }
-    $DATE = date("Y-m-d");
+    $date = date("Y-m-d");
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,14 +1,14 @@
 <?php 
-    date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
+    date_default_timezone_set("Europe/London"); 
     include '../../connection.php';
     
-    $DATE = date("Y-m-d");
-    // $DATE = "2023-07-05";
+    // $DATE = date("Y-m-d");
+    $DATE = "2023-11-28";
     echo $DATE."<BR>";
     $i = 1;
     
-    $curdate = date("Y-m-d H:i:s");
-    // $curdate = "2023-07-05 05:00:00";
+    // $curdate = date("Y-m-d H:i:s");
+    $curdate = "2023-11-28 05:00:00";
 
     echo $curdate."<BR>";
     
@@ -21,9 +21,6 @@
     $cutoff_1 = $array[0];
     $cutoff_2 = $array[1];
                 
-    // $cf = "09:00:00";
-    // $cs = "17:00:00";
-    
    $cf = $cutoff_1;
     $cs = $cutoff_2;
 
@@ -45,7 +42,6 @@
     if(($first < $curdate) && ($curdate < $sec))
 	{
 		$cutoff = date('Y-m-d H:i:s', strtotime("$DATE $cf"));
-// 		$cutoff = date('Y-m-d H:i:s', strtotime($cutoff. ' -  1 days')); 
 		echo $day = "Morning";
 		
 		$newdate = $DATE;
@@ -109,14 +105,11 @@
                 $totalqty = $newqty * $amt;
                 $total += $totalqty++;
                 // $totalqty = $row["order_qty"] * $row["product_normal_price"];
-                
                 // echo $totalqty++;
                 
             }
             // echo "User :".$user_id." Total : ".$total."<br><br>";      
 
-            
-            
             if($accept_nagative_balance =='0') 
             {
                 if($total > $user_balance)
@@ -153,10 +146,4 @@
             
         }
     }
-    
-    
-    //select
-
-    
-    
 ?>

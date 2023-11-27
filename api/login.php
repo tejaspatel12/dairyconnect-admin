@@ -123,7 +123,7 @@
                             }else{
                                 
                                 $response["status"]="yes";
-                                $result=mysqli_query($conn,"update tbl_user set user_token='$user_token' where user_id='$user_id'") or die(mysqli_error($conn));
+                                $result1=mysqli_query($conn,"update tbl_user set user_token='$user_token' where user_id='$user_id'") or die(mysqli_error($conn));
                                 
                                 $response["data"]=$row;
                                 

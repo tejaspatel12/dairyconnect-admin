@@ -128,11 +128,19 @@
                         echo "<script>window.location='$code.php';</script>";
                         }
 
-                        if(isset($_REQUEST['BtnUserTypeUpdate']))
+                        if(isset($_REQUEST['BtnUserStatusUpdate']))
                         {
-                            mysqli_query($conn,"update tbl_user set user_type='".$_REQUEST['txttype']."' where user_id='".$_REQUEST['deleteid']."'");
+                            mysqli_query($conn,"update tbl_user set user_time='".$_REQUEST['txtstatus']."' where user_id='".$_REQUEST['timeid']."'");
                             echo "<script>window.location='$code.php';</script>";
                         }
+                        
+                        // if(isset($_REQUEST['BtnUserTimeUpdate']))
+                        // {
+                        //     mysqli_query($conn,"update tbl_user set user_time='".$_REQUEST['txttype']."' where user_id='".$_REQUEST['timeid']."'");
+                        //     echo "<script>window.location='$code.php';</script>";
+                        // }
+                        
+                        
                     ?>
 
 					<!--end breadcrumb-->
@@ -234,7 +242,7 @@
                                                                     <div class="modal-body p-5">
                                                                         <form method="post">
                                                                         <h3 class="text-center">User Slot</h3>
-                                                                        <input type="hidden" id="deleteid" name="deleteid"/>
+                                                                        <input type="hidden" id="timeid" name="timeid"/>
                                                                         
                                                                         <div class="form-group">
                                                                             <select class="form-control form-control-lg radius-30" name="txtstatus">
@@ -251,7 +259,7 @@
                                                                         <div class="form-group text-right my-4"> 
                                                                         </div>
                                                                         <div class="form-group">-->
-										                                    <button type="submit" class="btn btn-primary radius-30 btn-lg btn-block" name="BtnUserStatusUpdate">Update</button>
+										                                    <button type="submit" class="btn btn-primary radius-30 btn-lg btn-block open-dialog" name="BtnUserStatusUpdate">Update</button>
                                                                         </div>
                                                                         </form>
                                                                         
@@ -261,15 +269,19 @@
                                                             </div>
                                                         </div>
                                                         <!-- Button trigger modal -->
-
-
+                                                        
+                                                        
                                                         <td>
                                                             
                                                             <?php if($row['user_time']=="0")
                                                             {?>
-                                                            <button type="button" data-toggle="modal" data-target="#exampleModal7" data-id="<?php echo $row['user_id'];?>" class="btn btn-info btn-sm m-1 open-dialog" name="btnyes">New</button>
+                                                            
+                                                            <button type="button" onclick="window.location='assign_time_user.php?user=<?php echo $row['user_id'];?>';" class="btn btn-info btn-sm m-1" name="btnyes">New</button>
+                                                            <!--<button type="button" data-toggle="modal" data-target="#exampleModal7" data-id="<?php echo $row['user_id'];?>" class="btn btn-info btn-sm m-1 open-dialog" name="btnyes">New</button>-->
                                                             <?php }else{?> 
-                                                            <button type="button" name="btnno" class="btn btn-success btn-sm m-1"> <?php if($row['user_time']=="2"){?> Evening Batch <?php }?></button>
+                                                            <?php if($row['user_time']=="1"){?> 
+                                                            <button type="button" name="btnno" class="btn btn-success btn-sm m-1">Morning Batch</button>
+                                                            <?php }else{?> <button type="button" name="btnno" class="btn btn-danger btn-sm m-1">Evening Batch</button>  <?php }?>
                                                             <?}?>
                                                             
                                                         </td>
@@ -388,9 +400,10 @@
 	    <script>
         $(document).on('click','.open-dialog',function(){
             var id = $(this).attr('data-id');
-            $('#deleteid').val(id);
+            $('#timeid').val(id);
         });
     </script>
+    
 </body>
 
 </html>

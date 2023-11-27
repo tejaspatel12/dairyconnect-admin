@@ -122,10 +122,10 @@
                            <!--<small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sagittis arcu.</small>-->
                         </td>
                         <td class="text-center"><?php echo $row['order_qty']?></td>
-                        <td class="text-center">₹<?php echo $row['order_one_unit_price']?></td>
+                        <td class="text-center">£<?php echo $row['order_one_unit_price']?></td>
                         <td class="text-right"><?php echo $row['order_date']?></td>
                         <?php $new = $row['order_qty'] * $row['order_one_unit_price']?>
-                        <td class="text-right">₹<?php echo $new;?></td>
+                        <td class="text-right">£<?php echo $new;?></td>
                         <?php $totalprice += $new++?>
                      </tr>
                      <?php }?>
@@ -138,7 +138,7 @@
             <div class="invoice-price">
                
                <div class="invoice-price-right">
-                  <small style="color:black">TOTAL</small> <span class="f-w-600"><b style="color:black">₹<?php echo $totalprice;?></b></span>
+                  <small style="color:black">TOTAL</small> <span class="f-w-600"><b style="color:black">£<?php echo $totalprice;?></b></span>
                </div>
             </div>
             <!-- end invoice-price -->

@@ -951,3 +951,12 @@
 [30-Jan-2022 16:47:12 Asia/Calcutta] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/ddhl3pp5xlmx/public_html/api/cronjobs/cancelOrder.php on line 17
 [27-Aug-2022 19:21:27 Asia/Calcutta] PHP Notice:  Undefined variable: newdate in /home/sgieeg3rqpnz/public_html/admin/api/cronjobs/userOrderDate.php on line 81
 [27-Aug-2022 19:21:27 Asia/Calcutta] PHP Notice:  Undefined variable: cutoff in /home/sgieeg3rqpnz/public_html/admin/api/cronjobs/userOrderDate.php on line 81
+[27-Nov-2023 14:02:32 Europe/London] PHP Warning:  Undefined variable $user_type in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 96
+[27-Nov-2023 14:02:32 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 14:02:44 Europe/London] PHP Warning:  Undefined variable $user_type in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 96
+[27-Nov-2023 14:02:44 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 14:05:36 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 14:47:32 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 14:48:07 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 15:12:53 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113
+[27-Nov-2023 15:48:01 Europe/London] PHP Warning:  Undefined variable $accept_nagative_balance in /home2/activrm2/7047CEM.activeit.in/api/cronjobs/cancelOrder.php on line 113

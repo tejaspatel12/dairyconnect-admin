@@ -13,7 +13,8 @@
 	
 	
 
-	$date = date("Y-m-d");
+// 	$date = date("Y-m-d");
+   $date = "2023-11-28";
 	
 // 	$cf = "22:00:00";
 // 	$cs = "14:00:00";
@@ -38,7 +39,8 @@
 	$evn = "17:00:00";
 	$evnend = "23:59:59";
 	
-	$curdate = date("Y-m-d H:i:s");
+// 	$curdate = date("Y-m-d H:i:s");
+       $curdate = "2023-11-28 05:00:00";
 	
 	$first = date('Y-m-d H:i:s', strtotime("$date $mor"));
 	$sec = date('Y-m-d H:i:s', strtotime("$date $morend"));

@@ -1,15 +1,14 @@
 <?php 
-    date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
+    date_default_timezone_set("Europe/London"); 
     include '../../connection.php';
     
     $DATE = date("Y-m-d");
-    // $DATE = "2023-07-05";
+    $DATE = "2023-11-28";
     echo $DATE."<BR>";
-    
     $i = 1;
     
     $curdate = date("Y-m-d H:i:s");
-    // $curdate = "2023-07-05 05:00:00";
+      $curdate = "2023-11-28 05:00:00";
 
     echo $curdate."<BR>";
     
@@ -21,21 +20,9 @@
     
     $cutoff_1 = $array[0];
     $cutoff_2 = $array[1];
-                
-    // $cf = "09:00:00";
-    // $cs = "17:00:00";
     
     $cf = $cutoff_1;
     $cs = $cutoff_2;
-    
-    // $cf = "09:00:00";
-    // $cs = "17:00:00";
-
-    // $mor = "00:00:00";
-    // $morend = "16:59:59";
-    
-    // $evn = "17:00:00";
-    // $evnend = "23:59:59";
     
     $mor = "00:00:00";
     $morend = "16:59:59";
@@ -54,14 +41,12 @@
     if(($first < $curdate) && ($curdate < $sec))
 	{
 		$cutoff = date('Y-m-d H:i:s', strtotime("$DATE $cf"));
-// 		$cutoff = date('Y-m-d H:i:s', strtotime($cutoff. ' -  1 days')); 
 		echo "$first | and | $sec<br><br>";
 		echo $day = "Morning"."<br><br>";
 		
 		$newdate = $DATE;
 		
 		$type = $cf;
-
 	}
 	elseif(($thr < $curdate) && ($curdate < $fur))
 	{
@@ -71,12 +56,9 @@
 		
 		$newdate = $DATE;
 		$type = $cs;
-
 	}
 	else
 	{}
-
-
 
     $result=mysqli_query($conn,"select * from tbl_order_calendar where order_date='$newdate' and oc_cutoff_time='$cutoff' and order_qty>'0'") or die(mysqli_error($conn));
     if(mysqli_num_rows($result)<=0)
@@ -85,8 +67,6 @@
     }
     else
     {
-        
-     
         while($row=mysqli_fetch_assoc($result))
         {
            echo $i."<br>";$i++;
@@ -100,12 +80,10 @@
                 <div class="alert alert-danger mb-2" role="alert">
                     <strong>Error!</strong> Duplicate User
                 </div>
-
             <?php
             }
             else
             {
-                                            
                 $result1=mysqli_query($conn,"insert into tbl_user_order_calendar (user_id,uoc_date,uoc_cutoff) 
                 values ('$user_id','$newdate','$type')") or die(mysqli_error($conn));
                 
@@ -117,16 +95,10 @@
                 {
                     echo "False";
                 }
-            
             }
             
         }
     }
     
 echo "<script>window.location='cancelOrder.php';</script>";
-    
-    
-
-    
-    
 ?>

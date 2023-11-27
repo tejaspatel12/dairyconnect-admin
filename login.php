@@ -2,11 +2,6 @@
     session_start();
     include 'connection.php';
     $title = "Login";
-    // $cat_res=mysqli_query($conn,"select * from tbl_web where web_id='1'");
-    // $cat_arr=array();
-    // while($row=mysqli_fetch_assoc($cat_res)){
-    //     $cat_arr[]=$row;    
-    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,18 +74,13 @@
                                             <?php
                                             break;
                                                 }
-                                                
-                                                
-                                                
                                             }
                                         }
-                                            
-                                        
                                     }
                                 ?>
 									<div class="text-center">
 										<img src="assets/images/logo_admin.png" width="80" alt="">
-										<h3 class="mt-4 font-weight-bold">Welcome Back,<BR> Admin Farm</h3>
+										<h3 class="mt-4 font-weight-bold">Welcome Back,<BR> <?php echo $webname?></h3>
 									</div>
 									<?php echo date("jS \of F Y h:i:s A");?>
 									<div class="login-separater text-center">
@@ -104,26 +94,12 @@
 										<label>Password</label>
 										<input type="password" class="form-control" name="txtPass"/>
 									</div>
-									<!-- <div class="form-row">
-										<div class="form-group col">
-											<div class="custom-control custom-switch">
-												<input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
-												<label class="custom-control-label" for="customSwitch1">Remember Me</label>
-											</div>
-										</div>
-										<div class="form-group col text-right"> <a href="authentication-forgot-password.html"><i class='bx bxs-key mr-2'></i>Forget Password?</a>
-										</div>
-									</div> -->
+						
 									<div class="btn-group mt-3 w-100">
 										<button type="submit" name="btnLogin" class="btn btn-primary btn-block">Log In</button>
 										<button type="submit" name="btnLogin" class="btn btn-primary"><i class="lni lni-arrow-right"></i>
 										</button>
 									</div>
-									<!-- <hr> -->
-									<!-- <div class="text-center">
-										<p class="mb-0">Don't have an account? <a href="authentication-register.html">Sign up</a>
-										</p>
-									</div> -->
 								</div>
                                 </form>
 							</div>

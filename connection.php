@@ -4,7 +4,8 @@ date_default_timezone_set("Europe/London");
 
     //ADMIN
     
-    $webname = "Admin Farm";
+    $webname = "Dairy Connect";
+    $domain = "https://7047cem.activeapp.in/";
     
     $ADMIN_PRODUCT_IMG = "images/product/";
     $ADMIN_CATEGORY_IMG = "images/category/";  
@@ -25,8 +26,8 @@ date_default_timezone_set("Europe/London");
     $ADMIN_MENU_IMG  = "images/logo/";
     
     //FUNCATION ASSETES
-	$date = date("Y-m-d");
-    // $date = "2022-12-05";
+// 	$date = date("Y-m-d");
+      $date = "2023-11-28";
 	
 	$cf = "09:00:00";
 	$cs = "17:00:00";
@@ -38,8 +39,8 @@ date_default_timezone_set("Europe/London");
 	$evn = "17:00:00";
 	$evnend = "23:59:59";
 
-	$curdate = date("Y-m-d H:i:s");
-    // $curdate = "2022-12-05 19:00:00";
+// 	$curdate = date("Y-m-d H:i:s");
+      $curdate = "2023-11-28 05:00:00";
 	
 	$first = date('Y-m-d H:i:s', strtotime("$date $mor"));
 	$sec = date('Y-m-d H:i:s', strtotime("$date $morend"));

@@ -113,11 +113,11 @@
 											</div>
 											<div class="ml-md-4 flex-grow-1">
 												<div class="d-flex align-items-center mb-1">
-													<h4 class="mb-0"><?php echo $row["deliveryboy_first_name"]. " ".$row["deliveryboy_last_name"];?></h4>
+													<h4 class="mb-0"><?php echo $row["deliveryboy_name"];?></h4>
 												
 												</div>
 												
-												<p class="text-primary"><i class='bx bx-phone'></i> <?php echo "+91".$row["deliveryboy_mobile_number"];?></p>
+												<p class="text-primary"><i class='bx bx-phone'></i> <?php echo "+44".$row["deliveryboy_mobile"];?></p>
 												
 												
 												
@@ -139,7 +139,7 @@
 											<tbody>
 												<tr>
 													<th>Number:</th>
-													<td><?php echo "+91".$row["deliveryboy_mobile_number"];?>
+													<td><?php echo "+44".$row["deliveryboy_mobile"];?>
 													</td>
 												</tr>
 												<tr>
@@ -410,15 +410,10 @@
 												<div class="form-body">
 													<div class="row">
 														<div class="col-12 col-lg-12">
-															<div class="form-row">
-																<div class="form-group col-md-6">
-																	<label>First Name</label>
-																	<input type="text" name=txtfname value="<?php echo $row["deliveryboy_first_name"];?>" class="form-control">
-																</div>
-																<div class="form-group col-md-6">
-																	<label>Last Name</label>
-																	<input type="text" name=txtlname value="<?php echo $row["deliveryboy_last_name"];?>" class="form-control">
-																</div>
+															
+															<div class="form-group">
+																<label>Name</label>
+																<input type="text" name=txtfname value="<?php echo $row["deliveryboy_name"];?>" class="form-control">
 															</div>
 															<!-- <div class="form-group">
 																<label>Password</label>
@@ -430,7 +425,7 @@
 															</div>
 															<div class="form-group">
 																<label>Phone</label>
-																<input type="text" name=txtphone value="<?php echo $row["deliveryboy_mobile_number"];?>" class="form-control">
+																<input type="text" name=txtphone value="<?php echo $row["deliveryboy_mobile"];?>" class="form-control">
 															</div>
                                                             
 															<button type="submit" name="BtnUpdateDeliveryBoyProfile" class="btn btn-light-primary"><i class="fadeIn animated bx bx-edit"></i> Update</button>
